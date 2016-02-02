@@ -1,0 +1,16 @@
+{
+	"title": "Aero Admin",
+	"static": [],
+	"styles": [],
+	"scripts": [],
+	"fonts": [],
+	"security": {
+		"key": "",
+		"cert": ""
+	},
+	"ports": {
+		"http": 8000,
+		"https": 8001,
+		"liveReload": 9001
+	}
+}

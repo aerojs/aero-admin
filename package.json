@@ -1,0 +1,17 @@
+{
+	"name": "aero-admin",
+	"version": "0.0.1",
+	"description": "Admin interface for Aero based websites.",
+	"keywords": [
+		"aero",
+		"admin",
+		"interface",
+		"website"
+	],
+	"homepage": "",
+	"repository": "aerojs/aero-admin",
+	"license": "",
+	"dependencies": {
+		"aero": "*"
+	}
+}
