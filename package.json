@@ -12,6 +12,8 @@
 	"repository": "aerojs/aero-admin",
 	"license": "",
 	"dependencies": {
-		"aero": "*"
+		"aero": "*",
+		"aero-reset": "*",
+		"aero-ajax": "*"
 	}
 }

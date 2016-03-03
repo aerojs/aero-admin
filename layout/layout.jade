@@ -1,0 +1,17 @@
+doctype html
+html
+	head
+		title= app.config.title
+	
+	body
+		header#header
+			h1.title= app.site.config.title
+			//- p.domain= app.site.config.domain
+			nav.nav
+				a.nav-link.ajax(href='/') Dash
+				a.nav-link.ajax(href='/pages') Pages
+				a.nav-link.ajax(href='/stats') Stats
+				//- a.nav-link.ajax(href='/scripts') Scripts
+				//- a.nav-link.ajax(href='/styles') Styles
+		
+		main#content.fade!= content
