@@ -1,0 +1,17 @@
+if !page
+	h2 Error: Page doesn't exist
+else
+	h2= page.id
+
+	if page.json
+		#json-editor.editor!= JSON.stringify(page.json, null, '\t')
+		
+	button Save
+	
+	//- h3 Size
+	//- 
+	//- if page.css
+	//- 	li= `Style (${Humanize.fileSize(page.css.length)})`
+	//- 	
+	//- if page.script
+	//- 	li= `Script (${Humanize.fileSize(page.script.length)})`

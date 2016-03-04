@@ -14,6 +14,7 @@
 	"dependencies": {
 		"aero": "*",
 		"aero-reset": "*",
-		"aero-ajax": "*"
+		"aero-ajax": "*",
+		"humanize-plus": "*"
 	}
 }

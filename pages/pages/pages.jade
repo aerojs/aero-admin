@@ -1,4 +1,4 @@
 h2 Pages
 
 each page in pages
-	a.page(href='/page/' + page.url)= page.id
+	a.page.ajax(href='/page/' + page.id, style=`margin-left: ${page.indent}rem`)= page.baseName
