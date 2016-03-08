@@ -1,4 +1,4 @@
-let Humanize = require('humanize-plus')
+let path = require('path')
 
 exports.get = (request, response) => {
 	let pageId = request.params.join('/')
@@ -6,6 +6,6 @@ exports.get = (request, response) => {
 
 	response.render({
 		page,
-		Humanize
+		path
 	})
 }

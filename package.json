@@ -15,6 +15,7 @@
 		"aero": "*",
 		"aero-reset": "*",
 		"aero-ajax": "*",
-		"humanize-plus": "*"
+		"humanize-plus": "*",
+		"body-parser": "*"
 	}
 }

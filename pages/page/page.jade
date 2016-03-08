@@ -2,11 +2,8 @@ if !page
 	h2 Error: Page doesn't exist
 else
 	h2= page.id
-
-	if page.json
-		#json-editor.editor!= JSON.stringify(page.json, null, '\t')
-		
-	button Save
+	p
+		a.ajax(href=`/edit/${path.relative(app.site.root, page.jsonPath)}`) JSON
 	
 	//- h3 Size
 	//- 
