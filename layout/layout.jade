@@ -7,7 +7,7 @@ html
 		header#header
 			h1.title= app.site.config.title
 			//- p.domain= app.site.config.domain
-			nav.nav
+			nav#nav
 				a.nav-link.ajax(href='/') Dash
 				a.nav-link.ajax(href='/pages') Pages
 				a.nav-link.ajax(href='/stats') Stats
@@ -19,5 +19,4 @@ html
 		
 		//- Ace Editor
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js', charset='utf-8')
-		script(src='https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/mode-json.js', charset='utf-8')
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/theme-monokai.js')
