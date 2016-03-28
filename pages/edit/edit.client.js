@@ -19,13 +19,13 @@ window.saveFile = function() {
 	})
 }
 
+window.resizeEditor = function() {
+	$('json-editor').style.height = (window.innerHeight - $('nav').clientHeight) + 'px'
+	editor.resize()
+}
+
 // Resize editor when resizing window
 if(!window.editorEventsRegistered) {
-	window.resizeEditor = function() {
-		$('json-editor').style.height = (window.innerHeight - $('nav').clientHeight) + 'px'
-		editor.resize()
-	}
-
 	window.addEventListener('resize', window.resizeEditor)
 
 	// Capture Ctrl + S event
