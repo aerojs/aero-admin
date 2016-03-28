@@ -11,7 +11,7 @@ module.exports = app => {
 		const link = `${admin.server.protocol}://localhost:${admin.server.port}`
 		console.log(`Admin interface ${chalk.dim('started on')} ${chalk.green(link)}.`)
 	})
-
+	
 	admin.use(bodyParser.json())
 
 	return admin.run()

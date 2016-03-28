@@ -2,8 +2,8 @@ h2 Dashboard
 
 h3 Performance
 
-mixin pie(value, limit, unit)
-	.dash-graph(data-limit=limit)
+mixin pie(title, value, limit, unit)
+	.dash-graph(title=title, data-limit=limit)
 		.pie
 			.progress
 
@@ -12,8 +12,8 @@ mixin pie(value, limit, unit)
 			span.unit= unit
 
 .dash-graphs
-	+pie(15.7, 50, 'KB')
-	+pie(17, 200, 'ms')
+	+pie('Average page size', 15.7, 50, 'KB')
+	+pie('Average load time', Math.round(averageResponseTime), 200, 'ms')
 
 h3 SEO
 
