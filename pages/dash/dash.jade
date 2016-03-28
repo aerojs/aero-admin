@@ -1,1 +1,20 @@
 h2 Dashboard
+
+h3 Performance
+
+mixin pie(value, limit, unit)
+	.dash-graph(data-limit=limit)
+		.pie
+			.progress
+
+		.detail
+			span.value= value
+			span.unit= unit
+
+.dash-graphs
+	+pie(15.7, 50, 'KB')
+	+pie(17, 200, 'ms')
+
+h3 SEO
+
+.dash-graphs

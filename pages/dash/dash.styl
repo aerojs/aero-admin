@@ -1,0 +1,38 @@
+pieSize = 300px
+pieWidth = pieSize
+pieHeight = pieSize / 2
+pieBackground = crimson
+pieTransitionTime = 500ms
+
+.dash-graphs
+	display flex
+	flex-flow row wrap
+	align-items center
+	justify-content space-around
+
+.dash-graph
+	display inline-block
+
+.pie
+	width pieWidth
+	height pieHeight
+	overflow hidden
+
+.progress
+	width pieWidth
+	height pieHeight
+	border-radius pieHeight pieHeight 0 0
+	background pieBackground
+	transform-origin 50% 100%
+	transform rotate(180deg)
+	transition transform pieTransitionTime ease
+
+.detail
+	width pieWidth
+	text-align center
+	font-size 3em
+	margin 0.75em 0
+
+.unit
+	margin-left 0.3em
+	opacity 0.7
