@@ -1,6 +1,6 @@
 h2 Dashboard
 
-h3 Performance
+h3.dash-header Performance
 
 mixin pie(title, value, limit, unit)
 	.dash-graph(title=title, data-limit=limit)
@@ -12,9 +12,5 @@ mixin pie(title, value, limit, unit)
 			span.unit= unit
 
 .dash-graphs
-	+pie('Average page size', 15.7, 50, 'KB')
-	+pie('Average load time', Math.round(averageResponseTime), 200, 'ms')
-
-h3 SEO
-
-.dash-graphs
+	+pie('Average code size', Math.round(averageCodeSize / 1024), 50, 'KB')
+	+pie('Average response time', Math.round(averageResponseTime), 200, 'ms')

@@ -1,5 +1,8 @@
 h2 Pages
 
-each page in pages
-	.page
-		a.page-link.ajax(href='/page/' + page.id, style=`margin-left: ${page.indent * 2}rem`)= page.baseName
+.pages
+	each page in pages
+		.page
+			a.page-link.ajax(href='/page/' + page.id, style=`margin-left: ${page.indent * 2}rem`)
+				span.fa.fa-fw.fa-folder
+				span= page.baseName

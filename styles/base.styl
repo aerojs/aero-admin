@@ -14,7 +14,6 @@ a
 
 	&:hover
 		color hoverColor
-		background-color hoverBackground
 
 #header
 	padding 0 1rem
@@ -36,6 +35,12 @@ a
 span.fa
 	margin-right 0.4em
 
-button
-	padding 0.4em 0.8em
+button, .button
 	font-family inherit
+	background-color white
+	border 1px solid buttonBorderColor
+	border-radius 3px
+	padding 0.4em 0.8em
+	&:hover
+		cursor pointer
+		background-color buttonHoverBackground
