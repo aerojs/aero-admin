@@ -1,0 +1,77 @@
+maxWidth = 560px
+
+input[type='text']
+input[type='email']
+input[type='password']
+input[type='url']
+input[type='number']
+	font-family 'Open Sans'
+	font-size 1em
+	border 1px solid buttonBorderColor
+	border-radius 3px
+	transition all 0.5s ease
+	margin 0 0 10px
+	padding 0.4em 0.8em
+	width 100%
+	box-sizing border-box
+	max-width maxWidth
+	&:focus
+		outline none
+
+input[type='checkbox']
+	width 22px
+	height 22px
+	margin 0.4em
+	margin-left 0
+	background-color white
+	border 1px solid buttonBorderColor
+	border-radius 3px
+	-webkit-appearance none
+	&:hover
+		background buttonHoverBackground
+	&:active, &:checked
+		background checkboxCheckedBackground
+		color white
+
+textarea
+	float left
+	border 1px solid rgba(0, 0, 0, 0.5)
+	border-radius 3px
+	padding 0.2em 0.4em
+	font-size 1em
+	font-family 'Open Sans'
+	line-height 1.7em
+	outline none
+	resize vertical
+	overflow auto
+
+select
+	// Layout
+	float left
+	padding 0.5em
+	padding 5px 10px
+	width 100%
+	max-width 756px
+
+	// Font
+	font-size 1em
+	font-weight normal
+	font-family inherit
+
+	transition all 0.5s ease
+	-webkit-appearance none
+	-moz-appearance none
+	box-shadow 0px 1px 3px rgba(0, 0, 0, 0.1)
+	user-select none
+	border-radius 2px
+	font-size inherit
+	overflow hidden
+	text-overflow ellipsis
+	white-space nowrap
+
+.error
+	padding 1em
+	background-color rgb(255, 64, 64)
+	color white
+	border-radius 5px
+	margin-bottom 1em

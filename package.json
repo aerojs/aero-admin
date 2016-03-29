@@ -17,6 +17,7 @@
 		"aero-ajax": "*",
 		"aero-font-awesome": "*",
 		"humanize-plus": "*",
-		"body-parser": "*"
+		"body-parser": "*",
+		"mkdirp": "*"
 	}
 }

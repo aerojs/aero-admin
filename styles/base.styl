@@ -25,6 +25,9 @@ a
 	padding 0 1rem
 	flex-grow 1
 
+.toolbar
+	margin 0.4em 0
+
 .title
 	display none
 
@@ -37,10 +40,15 @@ span.fa
 
 button, .button
 	font-family inherit
+	font-size 1rem
 	background-color white
+	color buttonTextColor
 	border 1px solid buttonBorderColor
 	border-radius 3px
 	padding 0.4em 0.8em
 	&:hover
 		cursor pointer
 		background-color buttonHoverBackground
+	&:active
+		color buttonPressedColor
+		background-color buttonPressedBackground
