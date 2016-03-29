@@ -4,31 +4,49 @@ datalist#page-id-list
 	each pageId in pageIdList
 		option(value=pageId)
 
-input(id='page-id', type='text', list='page-id-list')
+input(id='page-id', type='text', list='page-id-list', onkeyup='window.updateFileNames();')
 
 .page-element
 	input(id='jade', type='checkbox')
-	label .jade
+	label
+		span.file-name
+		span.extension .jade
 	
 .page-element
 	input(id='js', type='checkbox')
-	label .js
+	label
+		span.file-name
+		span.extension .js
 	
 .page-element
 	input(id='styl', type='checkbox')
-	label .styl
+	label
+		span.file-name
+		span.extension .styl
 	
 .page-element
 	input(id='json', type='checkbox')
-	label .json
+	label
+		span.file-name
+		span.extension .json
 	
 .page-element
 	input(id='jsonld', type='checkbox')
-	label .jsonld
+	label
+		span.file-name
+		span.extension .jsonld
 	
 .page-element
 	input(id='md', type='checkbox')
-	label .md
+	label
+		span.file-name
+		span.extension .md
+		
+.page-element
+	input(id='client.js', type='checkbox')
+	label
+		span.file-name
+		span.extension .client.js
 
 .toolbar
 	button(onclick='window.createPage();')

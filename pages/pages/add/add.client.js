@@ -13,3 +13,17 @@ window.createPage = function() {
 		$.loadURL('/pages', true)
 	})
 }
+
+const fileNameLabels = Array.from(document.querySelectorAll('.page-element'))
+.map(element => element.getElementsByTagName('label')[0])
+.map(label => label.querySelector('.file-name'))
+
+window.updateFileNames = function() {
+	let pageId = $('page-id').value
+	let parts = pageId.split('/')
+	let fileName = parts[parts.length - 1]
+
+	for(let label of fileNameLabels) {
+		label.textContent = fileName
+	}
+}

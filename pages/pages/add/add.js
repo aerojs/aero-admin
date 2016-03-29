@@ -5,6 +5,7 @@ let path = require('path')
 const defaultContent = {
 	'jade': '',
 	'js': 'exports.get = (request, response) => {\n\t\n}',
+	'client.js': '',
 	'styl': '',
 	'md': '',
 	'json': '{\n\t\n}',
