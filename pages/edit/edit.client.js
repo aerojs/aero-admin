@@ -15,7 +15,7 @@ window.saveFile = function() {
 		file,
 		contents: editor.getSession().getValue()
 	}).then(() => {
-		alert('File saved.')
+		console.log('File saved.')
 	})
 }
 

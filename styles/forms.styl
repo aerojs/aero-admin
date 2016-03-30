@@ -1,5 +1,20 @@
 maxWidth = 560px
 
+button, .button
+	font-family inherit
+	font-size 1rem
+	background-color white
+	color buttonTextColor
+	border 1px solid buttonBorderColor
+	border-radius 3px
+	padding 0.4em 0.8em
+	&:hover
+		cursor pointer
+		background-color buttonHoverBackground
+	&:active
+		color buttonPressedColor
+		background-color buttonPressedBackground
+
 input[type='text']
 input[type='email']
 input[type='password']
