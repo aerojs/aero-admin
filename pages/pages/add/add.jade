@@ -4,7 +4,7 @@ datalist#page-id-list
 	each pageId in pageIdList
 		option(value=pageId)
 
-input(id='page-id', type='text', list='page-id-list', onkeyup='window.updateFileNames();')
+input(id='page-id', type='text', list='page-id-list', oninput='window.updateFileNames();')
 
 .page-element
 	input(id='jade', type='checkbox')
