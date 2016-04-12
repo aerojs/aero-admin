@@ -3,6 +3,7 @@ if !page
 else
 	h2
 		span= page.id
+	h3 Files
 	.files
 		each file in page.files
 			a.button.file.ajax(href=`/edit/${path.relative(app.site.root, path.join(page.path, file))}`)
@@ -23,6 +24,7 @@ else
 					span.fa.fa-file-o
 				span= file
 	
+	h3 Tools
 	.toolbar
 		button(onclick='')
 			span.fa.fa-fw.fa-edit
