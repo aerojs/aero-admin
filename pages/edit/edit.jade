@@ -1,4 +1,4 @@
-if !file || !contents
+if !file || contents === undefined
 	h2 Error: File not found.
 else
 	h2#fileName= file

@@ -27,3 +27,6 @@ window.updateFileNames = function() {
 		label.textContent = fileName
 	}
 }
+
+// Focus input field
+$('page-id').focus()

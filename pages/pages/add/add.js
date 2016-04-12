@@ -4,7 +4,7 @@ let path = require('path')
 
 const defaultContent = {
 	'jade': '',
-	'js': 'exports.get = (request, response) => {\n\t\n}',
+	'js': 'exports.get = (request, response) => {\n\tresponse.end(\'Empty controller.\')\n}',
 	'client.js': '',
 	'styl': '',
 	'md': '',
@@ -33,6 +33,10 @@ exports.post = function*(request, response) {
 
 	yield mkdir(pagePath)
 	yield extensions.map(extension => fs.writeFileAsync(path.join(pagePath, baseName + `.${extension}`), defaultContent[extension], 'utf8'))
+
+	// Give the file system some time to notify us about the new files.
+	// Quick and dirty solution.
+	yield Promise.delay(100)
 
 	response.end(pageId)
 }
