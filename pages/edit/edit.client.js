@@ -7,7 +7,7 @@ const modeNames = {
 
 let file = $('fileName').textContent
 let fileExtension = file.substr(file.lastIndexOf('.') + 1)
-let modeName = modeNames[fileExtension] || fileExtension
+var modeName = modeNames[fileExtension] || fileExtension
 
 // Needs to be reassigned every time due to closures
 window.saveFile = function() {
@@ -53,19 +53,19 @@ editor.setOption('fontSize', '1em')
 if(window.modesLoaded === undefined)
 	window.modesLoaded = {}
 
-let updateMode = function() {
-	let JSONMode = ace.require(`ace/mode/${modeName}`).Mode
+window.updateMode = function() {
+	let JSONMode = ace.require('ace/mode/' + modeName).Mode
 	editor.session.setMode(new JSONMode())
 }
 
 if(window.modesLoaded[modeName]) {
-	updateMode()
+	window.updateMode()
 } else {
 	let highlighter = document.createElement('script')
-	highlighter.src = `https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/mode-${modeName}.js`
+	highlighter.src = `https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/mode-${modeName}.js`
 	highlighter.onload = function() {
 		window.modesLoaded[modeName] = true
-		updateMode()
+		window.updateMode()
 	}
 
 	document.head.appendChild(highlighter)
