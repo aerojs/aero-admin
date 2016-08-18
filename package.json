@@ -16,8 +16,10 @@
 		"aero-reset": "*",
 		"aero-ajax": "*",
 		"aero-font-awesome": "*",
-		"humanize-plus": "*",
 		"body-parser": "*",
-		"mkdirp": "*"
+		"express-session": "*",
+		"mkdirp": "*",
+		"passport": "*",
+		"passport-google-oauth": "*"
 	}
 }

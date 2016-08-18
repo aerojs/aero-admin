@@ -4,24 +4,28 @@ html
 		title= app.config.title
 	
 	body
-		header#header
-			h1.title= app.site.config.title
-			//- p.domain= app.site.config.domain
-			nav#nav
-				a.nav-link.ajax(href='/')
-					span.fa.fa-fw.fa-dashboard
-					span Dash
-				a.nav-link.ajax(href='/pages')
-					span.fa.fa-fw.fa-folder-open
-					span Pages
-				a.nav-link.ajax(href='/edit/config.json')
-					span.fa.fa-fw.fa-cog
-					span Settings
-				//- a.nav-link.ajax(href='/scripts') Scripts
-				//- a.nav-link.ajax(href='/styles') Styles
-		
-		main#content.fade!= content
-		
-		//- Ace Editor
-		script(src='https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js', charset='utf-8')
-		script(src='https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/theme-monokai.js')
+		if !user
+			main#content.fade
+				a(href='/auth/google') Login via Google
+		else
+			header#header
+				h1.title= app.site.config.title
+				//- p.domain= app.site.config.domain
+				nav#nav
+					a.nav-link.ajax(href='/')
+						span.fa.fa-fw.fa-dashboard
+						span Dash
+					a.nav-link.ajax(href='/pages')
+						span.fa.fa-fw.fa-folder-open
+						span Pages
+					a.nav-link.ajax(href='/edit/config.json')
+						span.fa.fa-fw.fa-cog
+						span Settings
+					//- a.nav-link.ajax(href='/scripts') Scripts
+					//- a.nav-link.ajax(href='/styles') Styles
+			
+			main#content.fade!= content
+			
+			//- Ace Editor
+			script(src='https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js', charset='utf-8')
+			script(src='https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/theme-monokai.js')

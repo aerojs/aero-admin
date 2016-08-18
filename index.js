@@ -1,8 +1,8 @@
-const aero = require('aero')
-const bodyParser = require('body-parser')
+let aero = require('aero')
+let bodyParser = require('body-parser')
 
 module.exports = app => {
-	const admin = aero(__dirname)
+	global.admin = aero(__dirname)
 
 	admin.verbose = false
 	admin.site = app
@@ -14,6 +14,9 @@ module.exports = app => {
 	})
 
 	admin.use(bodyParser.json())
+
+	// Run all startup modules
+	require('fs').readdirSync(__dirname + '/startup').forEach(mod => require('./startup/' + mod))
 
 	return admin.run()
 }
