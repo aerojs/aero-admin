@@ -6,6 +6,8 @@ module.exports = app => {
 
 	admin.verbose = false
 	admin.site = app
+	admin.security = admin.site.security
+
 	admin.get('favicon.ico', app.server.routes.GET['favicon.ico'])
 
 	admin.on('server started', () => {

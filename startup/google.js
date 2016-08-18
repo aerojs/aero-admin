@@ -5,10 +5,7 @@ let googleConfig = Object.assign({
         callbackURL: '/auth/google/callback',
 		passReqToCallback: true
     },
-    {
-		clientID: '824249895158-mbavihkq8cs15fi564d6muit90opsd7r.apps.googleusercontent.com',
-		clientSecret: 'QuAR2WAgTNfLsp7xBxwWisXm'
-	}
+	admin.site.apiKeys.admin.google
 )
 
 passport.use(new GoogleStrategy(
