@@ -1,6 +1,8 @@
 {
 	"title": "Aero Admin",
-	"static": [],
+	"static": [
+		"images"
+	],
 	"styles": [
 		"base"
 	],

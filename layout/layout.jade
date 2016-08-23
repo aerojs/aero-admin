@@ -5,8 +5,8 @@ html
 	
 	body
 		if !user
-			main#content.fade
-				a(href='/auth/google') Login via Google
+			main#content.fade.wallpaper
+				a.login-button(href='/auth/google') Login via Google
 		else
 			header#header
 				h1.title= app.site.config.title
