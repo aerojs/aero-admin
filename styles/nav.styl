@@ -1,7 +1,10 @@
 #nav
 	display flex
+	flex-flow row wrap
+	justify-content: center;
 
 .nav-link
+	font-size 1.5rem
 	color navLinkColor
 	padding 0.75rem 1rem
 
@@ -12,3 +15,4 @@
 	&.active
 		color activeColor
 		background-color headerBackground
+		text-shadow 0 0 8px alpha(navHoverColor, 50%)
