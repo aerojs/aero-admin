@@ -1,3 +1,11 @@
 h2 Security
 
-p Work in progress.
+if !app.security.key || !app.security.cert
+	p This site does not use an SSL certificate.
+	p Drop your certificate and the key into the security folder to start using HTTPS.
+else if app.certificate
+	p= 'Certificate validity: ' + validity
+	if app.site.certificate.issuer.organization
+		p= 'Issued by: ' + app.site.certificate.issuer.organization
+else
+	p Error getting certificate information.
