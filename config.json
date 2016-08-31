@@ -8,6 +8,9 @@
 	],
 	"scripts": [],
 	"fonts": ["Open Sans"],
+	"headers": {
+		"Content-Security-Policy": ""
+	},
 	"ports": {
 		"http": 7000,
 		"https": 7001,
