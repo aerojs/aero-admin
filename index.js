@@ -24,8 +24,5 @@ module.exports = app => {
 
 	admin.use(bodyParser.json())
 
-	// Run all startup modules
-	require('fs').readdirSync(__dirname + '/startup').forEach(mod => require('./startup/' + mod))
-
 	return admin.run()
 }
