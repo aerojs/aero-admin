@@ -3,6 +3,9 @@ html
 	head
 		title= app.config.title
 	
+		each mode in ['json', 'javascript', 'jade', 'stylus', 'markdown']
+			link(rel='prefetch', href='https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/mode-' + mode + '.js')
+	
 	body
 		if !user
 			main#content.fade.wallpaper
