@@ -7,21 +7,7 @@ else
 	.files
 		each file in page.files
 			a.button.file.ajax(href=`/edit/${path.relative(app.site.root, path.join(page.path, file))}`)
-				- var extension = file.substr(file.lastIndexOf('.') + 1)
-				if extension === 'js'
-					span.fa.fa-fw.fa-code
-				else if extension === 'jade'
-					span.fa.fa-fw.fa-eye
-				else if extension === 'md'
-					span.fa.fa-fw.fa-file-text-o
-				else if extension === 'json'
-					span.fa.fa-fw.fa-gear
-				else if extension === 'jsonld'
-					span.fa.fa-fw.fa-database
-				else if extension === 'styl'
-					span.fa.fa-fw.fa-css3
-				else
-					span.fa.fa-file-o
+				span.fa.fa-fw(class=fileExtensionClass(file))
 				span= file
 	
 	h3 Tools

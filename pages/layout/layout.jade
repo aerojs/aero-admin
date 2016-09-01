@@ -1,3 +1,7 @@
 h2 Layout
 
-p Work in progress.
+.files
+	each file in app.site.layout.files
+		a.button.file.ajax(href=`/edit/layout/${file}`)
+			span.fa.fa-fw(class=fileExtensionClass(file))
+			span= file

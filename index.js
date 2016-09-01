@@ -24,5 +24,31 @@ module.exports = app => {
 
 	admin.use(bodyParser.json())
 
+	admin.use((request, response, next) => {
+		request.globals = {
+			fileExtensionClass: function(file) {
+				let extension = file.substr(file.lastIndexOf('.') + 1)
+
+				switch(extension) {
+					case 'js':
+						return 'fa-code'
+					case 'jade':
+						return 'fa-eye'
+					case 'md':
+						return 'fa-file-text-o'
+					case 'json':
+						return 'fa-gear'
+					case 'jsonld':
+						return 'fa-database'
+					case 'styl':
+						return 'fa-css3'
+					default:
+						return 'fa-file-o'
+				}
+			}
+		}
+		next()
+	})
+
 	return admin.run()
 }
