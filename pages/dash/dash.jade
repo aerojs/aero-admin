@@ -23,6 +23,11 @@
 		.row
 			.row-name Node.js version
 			.row-value= process.version.replace('v', '')
+		
+		if osVersion
+			.row
+				.row-name OS version
+				.row-value= osVersion
 	
 	if app.certificate
 		#certificate.dash-graph
