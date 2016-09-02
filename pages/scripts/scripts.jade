@@ -4,3 +4,5 @@ each script in app.site.js
 	a.button.script.ajax(href=`/edit/scripts/${script.id}.js`)
 		.script-id= script.id
 		.script-size= script.code.length + ' bytes'
+
+p.total-size= `Total: ${app.site.scriptsSize} bytes`

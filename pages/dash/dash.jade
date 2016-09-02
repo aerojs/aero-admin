@@ -1,16 +1,43 @@
 //- h2 Dashboard
 
-h3.dash-header Performance
-
-mixin pie(title, value, limit, unit)
-	.dash-graph(title=title, data-limit=limit)
-		.pie
-			.progress
-
-		.detail
-			span.value= value
-			span.unit= unit
-
 .dash-graphs
-	+pie('Average code size', Math.round(averageCodeSize / 1024), 50, 'KB')
-	+pie('Average response time', Math.round(averageResponseTime), 200, 'ms')
+	#performance.dash-graph
+		h3.dash-graph-header Performance
+		.row
+			.row-name Average code size
+			.row-value
+				span.value= Math.round(averageCodeSize / 1024)
+				span.unit KB
+				
+		.row
+			.row-name Average response time
+			.row-value
+				span.value= Math.round(averageResponseTime)
+				span.unit ms
+				
+	#system.dash-graph
+		h3.dash-graph-header System
+		.row
+			.row-name Aero version
+			.row-value= app.site.version
+		.row
+			.row-name Node.js version
+			.row-value= process.version.replace('v', '')
+	
+	if app.certificate
+		#certificate.dash-graph
+			h3.dash-graph-header Certificate
+			.row
+				.row-name Expiration date
+				.row-value= certificateValidity
+			
+			if app.site.certificate.issuer.organization
+				.row
+					.row-name Issued by
+					.row-value= app.site.certificate.issuer.organization
+	
+	//- #misc.dash-graph
+	//- 	h3.dash-graph-header Miscellaneous
+	//- 	.row
+	//- 		.row-name Middleware count
+	//- 		.row-value= app.site.server.modifiers.length

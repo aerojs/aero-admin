@@ -33,7 +33,7 @@ module.exports = app => {
 					case 'js':
 						return 'fa-code'
 					case 'jade':
-						return 'fa-eye'
+						return 'fa-html5'
 					case 'md':
 						return 'fa-file-text-o'
 					case 'json':
@@ -41,7 +41,7 @@ module.exports = app => {
 					case 'jsonld':
 						return 'fa-database'
 					case 'styl':
-						return 'fa-css3'
+						return 'fa-paint-brush'
 					default:
 						return 'fa-file-o'
 				}

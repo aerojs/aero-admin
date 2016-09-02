@@ -4,3 +4,5 @@ each style in app.site.css
 	a.button.style.ajax(href=`/edit/styles/${style.id}.styl`)
 		.style-id= style.id
 		.style-size= style.code.length + ' bytes'
+
+p.total-size= `Total: ${app.site.stylesSize} bytes`

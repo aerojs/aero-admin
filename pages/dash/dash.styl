@@ -1,12 +1,5 @@
-pieSize = 400px
-pieWidth = pieSize
-pieHeight = pieSize / 2
-pieBackground = crimson
-pieTransitionTime = 500ms
-
-.dash-header
-	font-size 3em
-	text-align center
+.dash-graph-header
+	//
 
 .dash-graphs
 	display flex
@@ -15,27 +8,23 @@ pieTransitionTime = 500ms
 	justify-content space-around
 
 .dash-graph
-	display inline-block
+	width 100%
+	max-width 728px
 
-.pie
-	width pieWidth
-	height pieHeight
-	overflow hidden
+.row
+	display flex
+	flex-flow row wrap
+	padding 0.75em 1em
+	border-radius 3px
 
-.progress
-	width pieWidth
-	height pieHeight
-	border-radius pieHeight pieHeight 0 0
-	background pieBackground
-	transform-origin 50% 100%
-	transform rotate(180deg)
-	transition transform pieTransitionTime ease
+	&:hover
+		background-color buttonHoverBackground
 
-.detail
-	width pieWidth
-	text-align center
-	font-size 3em
-	margin 0.75em 0
+.row-name
+	flex 1
+
+.value
+	text-align right
 
 .unit
 	margin-left 0.3em
