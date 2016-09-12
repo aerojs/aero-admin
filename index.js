@@ -1,5 +1,6 @@
 let aero = require('aero')
 let bodyParser = require('body-parser')
+let chalk = require('chalk')
 
 module.exports = app => {
 	global.admin = aero(__dirname)
