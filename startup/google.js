@@ -5,7 +5,7 @@ let googleConfig = Object.assign({
         callbackURL: '/auth/google/callback',
 		passReqToCallback: true
     },
-	admin.site.apiKeys.admin.google
+	admin.site.api.admin.google
 )
 
 passport.use(new GoogleStrategy(

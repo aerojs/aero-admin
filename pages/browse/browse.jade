@@ -1,0 +1,13 @@
+if localPath
+	h2= localPath
+
+.files
+	each file in files
+		if file.info.isDirectory()
+			a.button.file.ajax(href=`/browse/${path.join(localPath, file.name)}`)
+				span.fa.fa-fw.fa-folder
+				span= file.name
+		else
+			a.button.file.ajax(href=`/edit/${path.join(localPath, file.name)}`)
+				span.fa.fa-fw(class=fileExtensionClass(file.name))
+				span= file.name

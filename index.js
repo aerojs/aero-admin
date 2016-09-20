@@ -10,6 +10,7 @@ module.exports = app => {
 
 	// The website we're administering
 	admin.site = app
+	app.admin = admin
 
 	// Copy certificate from the actual site
 	admin.security = admin.site.security
@@ -43,6 +44,11 @@ module.exports = app => {
 						return 'fa-database'
 					case 'styl':
 						return 'fa-paint-brush'
+					case 'sh':
+						return 'fa-terminal'
+					case 'key':
+					case 'cert':
+						return 'fa-lock'
 					default:
 						return 'fa-file-o'
 				}

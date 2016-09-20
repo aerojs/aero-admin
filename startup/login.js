@@ -3,7 +3,7 @@ let passport = require('passport')
 
 const options = {
 	name: 'sid',
-	secret: require('crypto').randomBytes(64).toString('hex'),
+	secret: admin.site.api.session.secret || require('crypto').randomBytes(64).toString('hex'),
 	saveUninitialized: false,
 	resave: false,
 	cookie: {

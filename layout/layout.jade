@@ -15,18 +15,9 @@ html
 				h1.title= app.site.config.title
 				//- p.domain= app.site.config.domain
 				nav#nav
-					a.nav-link.ajax(href='/', title='Dashboard')
-						i.fa.fa-fw.fa-dashboard
-					a.nav-link.ajax(href='/layout', title='Layout')
-						i.fa.fa-fw.fa-table
-					a.nav-link.ajax(href='/pages', title='Pages')
-						i.fa.fa-fw.fa-sitemap
-					a.nav-link.ajax(href='/scripts', title='Scripts')
-						i.fa.fa-fw.fa-code
-					a.nav-link.ajax(href='/styles', title='Styles')
-						i.fa.fa-fw.fa-paint-brush
-					a.nav-link.ajax(href='/edit/config.json', title='Settings')
-						i.fa.fa-fw.fa-cog
+					each link in nav
+						a.nav-link.ajax(href=link.url, title=link.title)
+							i.fa.fa-fw(class='fa-' + link.icon)
 			
 			main#content.fade!= content
 			
