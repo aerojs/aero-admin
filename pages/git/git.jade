@@ -1,0 +1,10 @@
+h2 Git
+
+if changes.length === 0
+	p
+		span.fa.fa-check
+		| No local changes.
+else
+	ul
+		each change in changes
+			li= change

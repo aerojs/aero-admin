@@ -6,24 +6,19 @@
 			"icon": "dashboard"
 		},
 		{
+			"url": "/git",
+			"title": "Git",
+			"icon": "git-square"
+		},
+		{
 			"url": "/browse",
 			"title": "Files",
 			"icon": "folder-open"
 		},
 		{
-			"url": "/pages",
-			"title": "Pages",
-			"icon": "sitemap"
-		},
-		{
-			"url": "/scripts",
-			"title": "Scripts",
-			"icon": "code"
-		},
-		{
-			"url": "/styles",
-			"title": "Styles",
-			"icon": "paint-brush"
+			"url": "/others",
+			"title": "Others",
+			"icon": "cubes"
 		}
 	]
 }

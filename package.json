@@ -1,6 +1,6 @@
 {
 	"name": "aero-admin",
-	"version": "0.1.5",
+	"version": "0.1.6",
 	"description": "Admin interface for Aero based websites.",
 	"keywords": [
 		"aero",
@@ -21,6 +21,6 @@
 		"express-session": "*",
 		"mkdirp": "*",
 		"passport": "*",
-		"passport-google-oauth": "*"
+		"passport-github": "*"
 	}
 }
