@@ -1,12 +1,12 @@
 let passport = require('passport')
 let GoogleStrategy = require('passport-google-oauth').OAuth2Strategy
 
-let googleConfig = Object.assign({
-        callbackURL: '/auth/google/callback',
-		passReqToCallback: true
-    },
-	admin.site.api.admin.google
-)
+let googleConfig = {
+    callbackURL: '/auth/google/callback',
+	passReqToCallback: true,
+	clientID: admin.site.api.admin.google.id,
+	clientSecret: admin.site.api.admin.google.secret
+}
 
 passport.use(new GoogleStrategy(
     googleConfig,
