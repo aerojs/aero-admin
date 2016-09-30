@@ -2,7 +2,7 @@ let passport = require('passport')
 let GitHubStrategy = require('passport-github').Strategy
 
 const githubConfig = {
-    callbackURL: '/auth/github/callback',
+    callbackURL: admin.production ? `${admin.server.protocol}://${admin.site.config.domain}:${admin.site.config.ports.admin}/auth/github/callback` : '/auth/github/callback',
 	passReqToCallback: true,
 	clientID: admin.site.api.admin.github.id,
 	clientSecret: admin.site.api.admin.github.secret
